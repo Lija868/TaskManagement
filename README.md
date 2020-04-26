@@ -10,3 +10,11 @@ Employee Task Management System
 7. run the server by activating virtual env 
 source venv/bin/activate
 python manage.py runserver
+
+
+# Run the schedular
+
+1.go to the path of schedular.py
+2. screen -r 
+3. run the file by 
+python schedular.py <config file name with path)
