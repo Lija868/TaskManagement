@@ -1,0 +1,16 @@
+{
+  "db_config": {
+    "host_ip" : "localhost",
+    "user_name" : "root",
+    "password" : "Passw0rd",
+    "db_name" : "task_system"
+  },
+  "app_config": {
+    "csv_file_folder" : "{{csv_file_folder}}"
+  },
+  "email_config" :{
+    "from_mail" : "{{from_mail}}",
+    "from_mail_password" : "{{from_mail_password}}",
+    "to_mail":"{{to_mail}}"
+  }
+}

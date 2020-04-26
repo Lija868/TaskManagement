@@ -1,0 +1,4 @@
+tasksystem/.idea/
+tasksystem/api_v0/__pycache__/
+tasksystem/api_v0/migrations/__pycache__/
+tasksystem/tasksystem/__pycache__/
