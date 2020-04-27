@@ -92,8 +92,6 @@ def export_users_csv():
 
 
     except Exception as e:
-        print("error----------------")
-        print(str(e))
         return
 
 

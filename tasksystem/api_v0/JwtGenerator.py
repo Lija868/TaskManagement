@@ -29,7 +29,6 @@ def passwordToken(profileId, jwtSecret, jwtTtl):
     time = currentTime.strftime(format)
     if (jwtTtl >= 0):
         expTime = currentTime + timedelta(milliseconds=jwtTtl)
-        # print("expTime b4 setting:" + str(expTime))
     payload = {"profile_id": profileId,  "issued_at": time, "exp": expTime}
     jwtToken = jwt.encode(payload, jwtSecret, algorithm)
     return jwtToken.decode()

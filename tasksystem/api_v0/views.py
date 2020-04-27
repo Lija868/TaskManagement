@@ -105,14 +105,11 @@ class RegisterViewSet(viewsets.ModelViewSet):
                     is_admin = is_admin
 
                 )
-                # t = Thread(target=send_verification, args=(phone_number,))
-                # t.start()
                 response["code"] = 200
                 response["message"] = "ok"
                 response["user_id"] = user_obj.user_id
                 return Response(response)
             except Exception as e:
-                print(e)
                 return Response({"code": 114, "message": "Unable to process the request"})
 
 class LoginViewSet(viewsets.ReadOnlyModelViewSet):
@@ -141,9 +138,7 @@ class LoginViewSet(viewsets.ReadOnlyModelViewSet):
 
         try:
             password_hash = user_obj.password_hash
-            print(password_hash)
             matched = bcrypt.checkpw(password.encode(), password_hash.encode())
-            print(matched)
 
             if (not matched):
                 return Response({"code": 711, "message": "invalid credentials"})
@@ -167,7 +162,6 @@ class LoginViewSet(viewsets.ReadOnlyModelViewSet):
 
             return Response(response_obj)
         except Exception as e:
-            print(e)
             return Response({"code": 114, "message": "Unable to process the request"})
 
 # class to see any users details passing id
@@ -290,7 +284,6 @@ class TaskViewSet(viewsets.ModelViewSet):
             resp["task_id"] = task_id
             return Response(resp)
         except Exception as e:
-            print(e)
             return Response({"code": 114, "message": "Unable to process the request"})
 
     def update(self, request, *args, **kwargs):
@@ -332,7 +325,6 @@ class TaskViewSet(viewsets.ModelViewSet):
             resp["message"] = "OK"
             return Response(resp)
         except Exception as e:
-            print(e)
             return Response({"code": 114, "message": "Unable to process the request"})
 
 

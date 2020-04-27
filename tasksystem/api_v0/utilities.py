@@ -58,7 +58,6 @@ def convertStrTime(time):
 
 
 def send_mail_user(email, full_name):
-    print(email)
     email_template_name = "api_v0/task_created.html"
     context = {
         "user": full_name,
