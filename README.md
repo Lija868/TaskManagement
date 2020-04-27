@@ -21,4 +21,4 @@ python schedular.py <config file name with path) (python schedular.py config.jso
 
 or else run the file using this command
 
-55 23 * /usr/bin/python python <pythonfilepath> <config file> (55 23 * /usr/bin/python python schedular.py config.json)
+55 23 * * 6 /usr/bin/python python <pythonfilepath> <config file> (55 23 * * 6  /usr/bin/python /var/python schedular.py /var/config.json)
