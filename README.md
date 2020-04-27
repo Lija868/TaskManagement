@@ -17,4 +17,8 @@ python manage.py runserver
 1.go to the path of schedular.py
 2. screen -r 
 3. run the file by 
-python schedular.py <config file name with path)
+python schedular.py <config file name with path) (python schedular.py config.json)
+
+or else run the file using this command
+
+55 23 * /usr/bin/python python <pythonfilepath> <config file> (55 23 * /usr/bin/python python schedular.py config.json)
